@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-solana-purple: #9945ff;
+  --color-solana-green: #14f195;
+  --color-solana-dark: #1a1a2e;
+  --color-solana-darker: #16213e;
+  --color-solana-gray: #0f1419;
+  --color-status-safe: #10b981;
+  --color-status-warning: #f59e0b;
+  --color-status-danger: #ef4444;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-solana-gray);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .card {
+    background: linear-gradient(to bottom right, var(--color-solana-dark), var(--color-solana-darker));
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(153, 69, 255, 0.2);
+  }
+
+  .btn-primary {
+    background: linear-gradient(to right, var(--color-solana-purple), var(--color-solana-green));
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .input-field {
+    background-color: var(--color-solana-gray);
+    border: 1px solid rgba(153, 69, 255, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    width: 100%;
+    transition: border-color 0.2s;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-solana-purple);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+}
